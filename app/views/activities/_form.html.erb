@@ -16,7 +16,7 @@
   <% if @activity.persisted? %>
     <div>
       <%= form.label :pubdate, "Recorded at"%>
-      <%= form.date_field :pubdate %>
+      <%= form.datetime_local_field :pubdate %>
     </div>
     <br>
   <% end %>
