@@ -1,13 +1,9 @@
 class ActivitiesController < ApplicationController
-  before_action :set_activity, only: %i[ show edit update destroy ]
+  before_action :set_activity, only: %i[ edit update destroy ]
 
   # GET /activities or /activities.json
   def index
     @activities = Activity.order(pubdate: :desc)
-  end
-
-  # GET /activities/1 or /activities/1.json
-  def show
   end
 
   # GET /activities/new
@@ -26,7 +22,7 @@ class ActivitiesController < ApplicationController
     respond_to do |format|
       if @activity.save
         format.html { redirect_to activities_path, notice: "Saved!" }
-        format.json { render :show, status: :created, location: @activity }
+        format.json { render :index, status: :created, location: @activity }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @activity.errors, status: :unprocessable_entity }
@@ -38,8 +34,8 @@ class ActivitiesController < ApplicationController
   def update
     respond_to do |format|
       if @activity.update(activity_params)
-        format.html { redirect_to @activity, notice: "Updated!" }
-        format.json { render :show, status: :ok, location: @activity }
+        format.html { redirect_to activities_path, notice: "Updated!" }
+        format.json { render :index, status: :ok, location: @activity }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @activity.errors, status: :unprocessable_entity }

@@ -22,6 +22,9 @@ a {
     color: #504DE8;
 }
 
+form {
+    margin-bottom: 1rem;
+}
 input[type="checkbox"] {
     display: none;
 }
