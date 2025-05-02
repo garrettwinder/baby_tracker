@@ -23,11 +23,6 @@ class ActivitiesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to activities_url
   end
 
-  test "should show activity" do
-    get activity_url(@activity)
-    assert_response :success
-  end
-
   test "should get edit" do
     get edit_activity_url(@activity)
     assert_response :success
@@ -35,7 +30,7 @@ class ActivitiesControllerTest < ActionDispatch::IntegrationTest
 
   test "should update activity" do
     patch activity_url(@activity), params: { activity: { eat: @activity.eat, notes: @activity.notes, pee: @activity.pee, poop: @activity.poop } }
-    assert_redirected_to activity_url(@activity)
+    assert_redirected_to activities_url
   end
 
   test "should destroy activity" do
