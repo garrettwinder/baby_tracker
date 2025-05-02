@@ -5,3 +5,4 @@
 <%= render "form", activity: @activity %>
 
 <%= link_to "&larr; Back to tracker".html_safe, activities_path %>
+<p><%= button_to "Delete", @activity, method: :delete %></p>
