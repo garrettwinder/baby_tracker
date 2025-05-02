@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pee: false
+  poop: false
+  eat: false
+  notes: MyText
+
+two:
+  pee: false
+  poop: false
+  eat: false
+  notes: MyText

@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Baby tracker" %>
+
+<h1>Baby tracker</h1>
+
+<ul id="activities">
+  <% @activities.each do |activity| %>
+    <%= render activity %>
+  <% end %>
+</ul>
+
+<%= link_to "Track something", new_activity_path %>

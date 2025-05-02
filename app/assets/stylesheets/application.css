@@ -1,0 +1,55 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+body {
+    background-color: #F9F8F7;
+    color: #000629;
+    font-family: "Figtree", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 600px;
+}
+
+a {
+    color: #504DE8;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+label {
+    color: white;
+    cursor: pointer;
+    background-color: #504DE8;
+    border-radius: 6px;
+    display: block;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+input[type="checkbox"]:checked + label {
+  opacity: 1;
+}
+
+#activities {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0;
+
+    li {
+        border-bottom: 1px dashed #6B7280;
+        font-size: 2rem;
+        padding: 0.25rem 0;
+    }
+}
+

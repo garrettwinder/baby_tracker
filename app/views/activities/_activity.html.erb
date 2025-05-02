@@ -1,0 +1,22 @@
+<li id="<%= dom_id activity %>">
+
+  <%= time_ago_in_words(activity.created_at) %> ago:
+
+  <% if activity.eat %>
+      <strong>🍼</strong>
+  <% end %>
+
+  <% if activity.sleep %>
+      <strong>😴</strong>
+  <% end %>
+
+  <% if activity.pee %>
+    <strong>💦</strong>
+  <% end %>
+
+  <% if activity.poop %>
+    <strong>💩</strong>
+  <% end %>
+
+  <%= button_to "Delete", activity, method: :delete %>
+</li>

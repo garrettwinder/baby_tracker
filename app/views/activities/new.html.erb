@@ -1,0 +1,11 @@
+<% content_for :title, "Track something" %>
+
+<h1>Track something</h1>
+
+<%= render "form", activity: @activity %>
+
+<br>
+
+<div>
+  <%= link_to "&larr; Back to tracker".html_safe, activities_path %>
+</div>
