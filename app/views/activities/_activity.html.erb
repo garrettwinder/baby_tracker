@@ -1,6 +1,6 @@
 <li id="<%= dom_id activity %>">
 
-  <%= time_ago_in_words(activity.pubdate) %> ago:
+  <%= link_to time_ago_in_words(activity.pubdate), edit_activity_path(activity) %> ago:
 
   <% if activity.eat %>
       <strong>🍼</strong>
