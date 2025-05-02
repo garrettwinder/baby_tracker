@@ -11,22 +11,32 @@
     </div>
   <% end %>
 
-  <div>
+  <%= form.hidden_field :pubdate, value: Time.current %>
+
+  <% if @activity.persisted? %>
+    <div>
+      <%= form.label :pubdate, "Recorded at"%>
+      <%= form.date_field :pubdate %>
+    </div>
+    <br>
+  <% end %>
+
+  <div class="checkbox-item">
     <%= form.checkbox :eat %>
     <%= form.label :eat, "🍼 eat" %>
   </div>
 
-  <div>
+  <div class="checkbox-item">
     <%= form.checkbox :sleep %>
     <%= form.label :sleep, "😴 sleep" %>
   </div>
 
-  <div>
+  <div class="checkbox-item">
     <%= form.checkbox :pee %>
     <%= form.label :pee, "💦 pee" %>
   </div>
 
-  <div>
+  <div class="checkbox-item">
     <%= form.checkbox :poop %>
     <%= form.label :poop, "💩 poo" %>
   </div>

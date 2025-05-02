@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_02_205658) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_02_223027) do
   create_table "activities", force: :cascade do |t|
     t.boolean "pee"
     t.boolean "poop"
@@ -19,5 +19,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_02_205658) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "sleep"
+    t.datetime "pubdate"
   end
 end

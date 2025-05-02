@@ -3,7 +3,7 @@ class ActivitiesController < ApplicationController
 
   # GET /activities or /activities.json
   def index
-    @activities = Activity.all
+    @activities = Activity.order(pubdate: :desc)
   end
 
   # GET /activities/1 or /activities/1.json
@@ -65,6 +65,6 @@ class ActivitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def activity_params
-      params.expect(activity: [ :pee, :poop, :eat, :sleep ])
+      params.expect(activity: [ :pee, :poop, :eat, :sleep, :pubdate ])
     end
 end

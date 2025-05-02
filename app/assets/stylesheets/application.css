@@ -25,7 +25,7 @@ a {
 input[type="checkbox"] {
     display: none;
 }
-label {
+ .checkbox-item label {
     color: white;
     cursor: pointer;
     background-color: #504DE8;
