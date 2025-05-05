@@ -11,6 +11,17 @@ Track basic baby activity (pee, poo, eat, sleep).
   - `bin/dev`
   - Go to: http://localhost:3000
 
+## Todo
+
+- Today yesterday and all scope for index
+- Edit date (lol), timezone
+- Wet and dirty
+- Amount of sleep
+- Amount of food
+- Show high level stats on index in scopes
+- Fix tests
+- Show / edit notes
+
 ## FYI
 
 - You should check for issues before commiting with: `bin/rubocop`
