@@ -16,7 +16,7 @@
   <% else %>
     <div>
       <%= form.label :pubdate, "Recorded at"%>
-      <%= form.datetime_local_field :pubdate %>
+      <%= form.datetime_local_field :pubdate, step: 1 %>
     </div>
     <br>
   <% end %>
