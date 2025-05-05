@@ -60,3 +60,11 @@ input[type="checkbox"]:checked + label {
     }
 }
 
+.h-link {
+    float: right;
+    padding-top: 19px;
+}
+.h-link-alt {
+    padding-top: 35px;
+}
+

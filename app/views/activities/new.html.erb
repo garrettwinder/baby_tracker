@@ -1,7 +1,6 @@
 <% content_for :title, "Track something" %>
 
+<%= link_to "&larr; Back to tracker".html_safe, activities_path, class: "h-link h-link-alt" %>
 <h1>Track something</h1>
 
 <%= render "form", activity: @activity %>
-
-<%= link_to "&larr; Back to tracker".html_safe, activities_path %>

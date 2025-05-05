@@ -2,6 +2,7 @@
 
 <% content_for :title, "Baby tracker" %>
 
+<%= link_to "Track something&rarr;".html_safe, new_activity_path, class: "h-link" %>
 <h1>Baby tracker</h1>
 
 <ul id="activities">
@@ -9,5 +10,3 @@
     <%= render activity %>
   <% end %>
 </ul>
-
-<%= link_to "Track something", new_activity_path %>
