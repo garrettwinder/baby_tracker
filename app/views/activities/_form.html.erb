@@ -11,9 +11,9 @@
     </div>
   <% end %>
 
-  <%= form.hidden_field :pubdate, value: Time.current %>
-
-  <% if @activity.persisted? %>
+  <% unless @activity.persisted? %>
+    <%= form.hidden_field :pubdate, value: Time.current %>
+  <% else %>
     <div>
       <%= form.label :pubdate, "Recorded at"%>
       <%= form.datetime_local_field :pubdate %>
