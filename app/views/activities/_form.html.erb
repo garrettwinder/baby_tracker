@@ -13,7 +13,11 @@
 
   <div>
     <%= form.label :pubdate, "Activity time"%>
-    <%= form.datetime_local_field :pubdate, step: 1, value: Time.current %>
+    <% unless @activity.persisted? %>
+      <%= form.datetime_local_field :pubdate, step: 1, value: Time.current %>
+    <% else %>
+      <%= form.datetime_local_field :pubdate, step: 1 %>
+  <% end %>
   </div>
   <br>
 
