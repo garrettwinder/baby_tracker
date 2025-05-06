@@ -11,15 +11,11 @@
     </div>
   <% end %>
 
-  <% unless @activity.persisted? %>
-    <%= form.hidden_field :pubdate, value: Time.current %>
-  <% else %>
-    <div>
-      <%= form.label :pubdate, "Recorded at"%>
-      <%= form.datetime_local_field :pubdate, step: 1 %>
-    </div>
-    <br>
-  <% end %>
+  <div>
+    <%= form.label :pubdate, "Activity time"%>
+    <%= form.datetime_local_field :pubdate, step: 1, value: Time.current %>
+  </div>
+  <br>
 
   <div class="checkbox-item">
     <%= form.checkbox :eat %>
